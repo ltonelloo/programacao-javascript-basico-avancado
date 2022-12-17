@@ -1,0 +1,20 @@
+body {
+    background: black;
+    color: white;
+}
+
+p {
+    color: red;
+    font-weight: bold;
+}
+
+.verde {
+    color: green;
+    font-size: 42px;
+}
+
+#p2 {
+    text-decoration: underline;
+    color: aqua;
+    font-size: 20px;
+}
