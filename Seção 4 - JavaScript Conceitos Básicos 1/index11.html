@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seção 04 - Aula 11</title>
+    </head>
+    <body>
+        <h1>Seção 04 - Aula 11</h1>
+        <h2>Intervalos e Timeout</h2>
+
+        <script>
+            //Intervalo
+            var nome = 'Geek University ';
+
+            function escrever() {
+                console.log(nome);
+                nome += '!';
+            }
+
+            //Interval - Executa a função a cada x tempo
+            setInterval(escrever, 1000); //5 segundos(5000 milisegundos)
+
+            //Timeout - Executa a função depois de x tempo
+            setTimeout(escrever, 1000); //3 segundos(3000 milisegundos)
+        </script>
+    </body>
+</html>

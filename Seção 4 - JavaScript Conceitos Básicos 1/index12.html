@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seção 04 - Aula 12</title>
+    </head>
+    <body>
+        <h1>Seção 04 - Aula 12</h1>
+        <h2>Escopo de Variáveis</h2>
+
+        <script>
+            function somar(num1, num2) {
+                //Variável reconhecida apenas dentro do bloco da função.
+                var valor = 5; // Variável Local
+                return valor + num1 + num2;
+            }
+
+            for (var i = 0; i < 5; i++) {
+                var outra = 5; // Variável Global
+                console.log(i * outra);
+            }
+
+            console.log(somar(4, 6));
+
+            // console.log(valor); Não pode ser acessada fora do escopo.
+            console.log(outra); //Pode ser acessada pois é uma variável global.
+
+            for (let j = 0; j < 6; j++) {
+                let uma = 12;
+                console.log(j * uma);
+            }
+
+            //As duas não podem ser acessadas por se tratarem de variáveis locais.
+            // console.log(j);
+            // console.log(uma);
+        </script>
+    </body>
+</html>

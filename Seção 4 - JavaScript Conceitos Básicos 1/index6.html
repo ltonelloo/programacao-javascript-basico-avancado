@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seção 04 - Aula 06</title>
+    </head>
+    <body>
+        <h1>Seção 04 - Aula 06</h1>
+        <h2>Operadores Lógicos</h2>
+
+        <script>
+            var curso = 'JavaScript';
+            var legal = true;
+
+            //AND &&
+            if (curso === 'JavaScript' && legal === true) {
+                console.log('O curso é de JavaScript e é legal.');
+            } else {
+                console.log('O curso não é de JavaScript e não é legal.');
+            }
+
+            //OR ||
+            if (curso === 'JavaScript' || legal === true) {
+                console.log('O curso é de JavaScript ou é legal.');
+            } else {
+                console.log('O curso não é de JavaScript ou não é legal.');
+            }
+
+            //NOT !=
+            if (curso != 'JavaScript') {
+                console.log('O curso não é de JavaScript.');
+            } else {
+                console.log('O curso é de JavaScript.');
+            }
+        </script>
+    </body>
+</html>

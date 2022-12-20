@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seção 04 - Aula 03</title>
+    </head>
+    <body>
+        <h1>Seção 04 - Aula 03</h1>
+        <h2>Estruturas Condicionais</h2>
+
+        <script>
+            var idade = 17;
+
+            if (idade >= 18) {
+                console.log('Maior de idade');
+            } else {
+                console.log('Menor de idade');
+            }
+
+            if (idade <= 14) {
+                console.log('Criança');
+            } else if (idade > 14 && idade < 18) {
+                console.log('Adolescente');
+            } else {
+                console.log('Adulto');
+            }
+
+            //Verifica Valor
+            if (1 == '1') {
+                console.log('Sim, 1 == 1');
+            } else {
+                console.log('Não');
+            }
+
+            //Verifica Valor e Tipo
+            if (1 === '1') {
+                console.log('Sim, 1 == 1');
+            } else {
+                console.log('Não');
+            }
+
+            var sexo = 'f';
+
+            switch (sexo) {
+                case 'm':
+                    console.log('Masculino');
+                    break;
+
+                case 'f':
+                    console.log('Feminino');
+                    break;
+
+                default:
+                    console.log('Desconhecido');
+                    break;
+            }
+
+            var s = 'm';
+            var masculino;
+
+            if (s === 'm') {
+                masculino = true;
+            } else {
+                masculino = false;
+            }
+            console.log(masculino);
+
+            //Simplificando
+            var masc = s === 'm';
+            console.log(masc);
+        </script>
+    </body>
+</html>
