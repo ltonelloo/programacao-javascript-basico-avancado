@@ -1,74 +1,44 @@
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let soma = 0;
+let numeros = [1, 2, 3, 4, 5, 6];
 
-// let somar = numeros.forEach((numero) => {
-//     soma += numero;
-// });
-
-// console.log(soma);
-
-// function somar(array) {
-//     array.forEach(function (numero) {
-//         soma += numero;
-//     });
-//     console.log(soma);
-// }
-
-// somar(numeros);
-
-let multiplicado = 1;
-let multiplicador = (array) => {
-    for (let i = 0; i < array.length; i++) {
-        multiplicado *= array[i];
-    }
-    return multiplicado;
-};
-console.log(multiplicador(numeros));
-
-// Forma 1
-function somar1(num1, num2) {
-    return num1 + num2;
+function dobrar(valor) {
+    return valor * 2;
 }
 
-console.log(somar1(4, 6));
+let res1 = numeros.map(dobrar);
 
-// Forma 2
-let somar2 = function (num1, num2) {
-    return num1 + num2;
+console.log(numeros);
+console.log(res1);
+
+// Funções Anônimas - Lambdas (Funções Lambdas)
+
+let res2 = numeros.map(function (valor) {
+    return valor * 2;
+});
+
+console.log(res2);
+
+console.log(dobrar(9));
+
+const outra = function (valor) {
+    return valor * 2;
 };
 
-console.log(somar2(4, 6));
+console.log(outra(9));
 
-// Forma 3
-let somar3 = somar1;
-
-console.log(somar3(4, 6));
-
-// Arrow Function
-const somar4 = (num1, num2) => {
-    //sdfsdfsdf
-    return num1 + num2;
-};
-
-console.log(somar4(4, 6));
-
-/*
-Atenção:
-
-Caso a sua função tenha apenas 1 parâmetro de entrada e executa apenas uma linha,
-você pode simplificar ainda mais usando Arrow Function
-*/
-
-const dobrar = (valor) => valor * 2;
-
-console.log(dobrar(5));
-
-function mensagem1() {
-    console.log('Evolua seu lado geek!');
+function somar(v1, v2) {
+    return v1 + v2;
 }
 
-mensagem1();
+let mostrar = function (n1, n2, calculo = somar) {
+    console.log(calculo(n1, n2));
+};
 
-const msg = () => console.log('Evolua seu lado geek!');
+mostrar(2, 4); // 6
 
-msg();
+mostrar(6, 9, somar); // 15
+
+mostrar(3, 6, function (n1, n2) {
+    return n1 + n2;
+}); //9
+
+mostrar(3, 6, (v1, v2) => v1 * v2);
