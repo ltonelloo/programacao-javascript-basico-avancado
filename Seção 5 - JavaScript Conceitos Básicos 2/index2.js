@@ -62,6 +62,10 @@ var ret = alunos.pop(); // Remove e retorna o último item do array.
 console.log(alunos);
 console.log(ret);
 
+// Removendo o primeiro item de um array.
+alunos.shift();
+console.log(alunos);
+
 // Tamanho do array.
 console.log(alunos.length); // 6
 
@@ -106,3 +110,34 @@ console.log(precos);
 for (var i = 0; i < precos.length; i++) {
     console.log(precos[i]);
 }
+
+// Retornando um NOVO array a partir da posição.
+var novo = precos.slice(3);
+console.log(novo);
+
+novo = precos.slice(1, 2); // A partir do índice 1, pegue até o índice 2 sem incluí-lo.
+console.log(novo);
+
+// CONCATENAÇÃO de arrays.
+
+var pares = [2, 4, 6, 8, 10];
+var impares = [1, 3, 5, 7, 9];
+
+var rest = pares.concat(impares); // Concatena os arrays.
+console.log(rest);
+
+rest.sort(function (a, b) {
+    return a - b;
+});
+console.log(rest);
+
+// 4x4
+var tabuleiro = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+];
+
+console.log(tabuleiro[0][0]);
+console.log(tabuleiro[2][2]);
